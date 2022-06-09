@@ -17,7 +17,7 @@ def download_files_synchronously(folderPath):
     # Download files from uris
     for url in download_uris:
         print("Fetching url: " + url)
-
+        
         req = requests.get(url)
 
         # Error handling for unsuccessful downloads

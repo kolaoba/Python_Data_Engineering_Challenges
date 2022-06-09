@@ -7,11 +7,12 @@ import aiofiles
 def create_downloads_folder():
     # Create downloads directory if not exists
     folderPath = "./downloads"
-    return folderPath
 
     if not os.path.exists(folderPath):
         print("Folder does not exist\nCreating downloads folder...")
         os.makedirs(folderPath)
+
+    return folderPath
 
 def extract_filename(url, folderPath):
     # Extract filename
