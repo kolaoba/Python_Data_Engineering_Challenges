@@ -23,11 +23,12 @@ def main():
     target_file = soup.find_all(lambda tag:tag.name=='tr' and file_date in tag.text)
 
     # for multiple occurences of target
-    if len(target) > 1:
-        target = target[0]
+    if len(target_file) > 1:
+        target_file = target_file[0]
     
     # search for target filename
-    file_name = target.find('a')['href']
+    file_name = target_file.find('a')['href']
+
 
     # join url with file_name for file url
     file_url = url + file_name
@@ -50,7 +51,7 @@ def main():
     max_record = df[df["HourlyDryBulbTemperature"] == df["HourlyDryBulbTemperature"].max()]
 
     # print max record
-    print('Maximum temperature of %s occured on %s at %s' % (max_record['HourlyDryBulbTemperature'], max_record['DATE'], max_record['NAME']))
+    print('Maximum temperature of %s occured on %s at %s' % (max_record['HourlyDryBulbTemperature'].values[0], max_record['DATE'].values[0], max_record['NAME'].values[0]))
 
 if __name__ == '__main__':
     main()
