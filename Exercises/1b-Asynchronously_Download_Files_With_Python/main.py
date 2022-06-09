@@ -2,7 +2,7 @@ import requests
 import os
 import aiohttp
 import asyncio
-from helper_functions import *
+from helper_package.helper_functions import *
 
 download_uris = [
     'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2018_Q4.zip',
