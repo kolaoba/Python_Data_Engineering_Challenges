@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from helper_functions import create_downloads_folder, save_file
+from helper_package.helper_functions import create_downloads_folder, save_file
 
 
 
