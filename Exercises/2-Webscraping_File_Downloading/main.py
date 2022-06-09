@@ -50,8 +50,9 @@ def main():
     # find records with highest HourlyDryBulbTemperature
     max_record = df[df["HourlyDryBulbTemperature"] == df["HourlyDryBulbTemperature"].max()]
 
+    
     # print max record
-    print('Maximum temperature of %s occured on %s at %s' % (max_record['HourlyDryBulbTemperature'].values[0], max_record['DATE'].values[0], max_record['NAME'].values[0]))
+    print('Maximum temperature of %s degrees occured on %s at %s' % (max_record['HourlyDryBulbTemperature'].values[0], max_record['DATE'].values[0], max_record['NAME'].values[0]))
 
 if __name__ == '__main__':
     main()
